@@ -1,7 +1,7 @@
 {
-  "name": "distube-example",
+  "name": "MusicBot-GhostStru",
   "version": "1.0.0",
-  "description": "DisTube example music bot.",
+  "description": "Nucleus example music bot.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,16 +9,8 @@
     "lint:fix": "eslint --fix ./",
     "p": "prettier . --write"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/distubejs/example.git"
-  },
-  "author": "Skick",
+  "author": "GhostStru",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/distubejs/example/issues"
-  },
-  "homepage": "https://github.com/distubejs/example#readme",
   "dependencies": {
     "@discordjs/opus": "^0.7.0",
     "@discordjs/voice": "^0.8.0",
@@ -30,7 +22,6 @@
     "eslint-config-prettier": "^8.3.0",
     "ffmpeg": "^0.0.4",
     "libsodium-wrappers": "^0.7.9",
-    "quick.db": "^9.0.2"
   },
   "devDependencies": {
     "eslint": "^8.8.0",
