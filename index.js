@@ -10,12 +10,12 @@ const client = new Discord.Client({
 })
 const fs = require('fs')
 const db = require("quick.db")
-const config = require('../NucleusNEW/config.json')
+const config = require('.config.json')
 const { SpotifyPlugin } = require('@distube/spotify')
 const { SoundCloudPlugin } = require('@distube/soundcloud')
 const { YtDlpPlugin } = require('@distube/yt-dlp')
 
-client.config = require('../NucleusNEW/config.json')
+client.config = require('./config.json')
 client.distube = new DisTube(client, {
   leaveOnStop: false,
   emitNewSongOnly: true,
@@ -32,12 +32,7 @@ client.distube = new DisTube(client, {
 })
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
-const play = "▶️"
-const stop = "⏹️"
-const queue = "📄"
-const success = "☑️"
-const repeat = "🔁"
-const error = "❌"
+client.emotes = config.emoji
 
 fs.readdir('./commands/', (err, files) => {
   if (err) return console.log('Could not find any commands!')
